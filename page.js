@@ -50,7 +50,7 @@ let Page = function(name, features) {
       addChildElement
     };
 
-    function addEventHandler (event, requestedParams, callback) {
+    function addEventHandler(event, requestedParams, callback) {
       self.handlers[elemInfo.itemID][event] = {
         params: requestedParams,
         func: callback
@@ -59,7 +59,7 @@ let Page = function(name, features) {
       return elem;
     }
 
-    function addChildElement (type, value) {
+    function addChildElement(type, value) {
       elem.info.children.push({
         type: type,
         value: value

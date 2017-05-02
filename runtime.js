@@ -46,6 +46,11 @@ let Runtime = (function() {
           args: handlerArg
         };
 
+        // display on original page
+        let ev = document.createElement('p');
+        ev.innerHTML = JSON.stringify(eventInfo);
+        document.getElementById('events').appendChild(ev);
+
         // send eventInfo through WS to the application
         page.executeEvent(eventInfo);
       }
